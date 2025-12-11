@@ -1,0 +1,196 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f2ff;
+  color: #1b1b1b;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+aside.sidebar {
+  width: 280px;
+  background-color: #1A1F36; /* dark blue */
+  color: #E0F2FF; /* light blue text */
+  padding: 25px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* name remains centered */
+}
+
+aside.sidebar .profile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+aside.sidebar img.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #89CFF0; /* blue border */
+}
+
+aside.sidebar h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #89CFF0; /* blue */
+}
+
+/* Info aligned left */
+aside.sidebar .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  text-align: left; /* align left */
+}
+
+aside.sidebar .info div {
+  display: flex;
+  flex-direction: column;
+}
+
+aside.sidebar .info .label {
+  font-weight: 600;
+  color: #89CFF0; /* blue label */
+  margin-bottom: 2px;
+}
+
+aside.sidebar .info .value {
+  color: #E0F2FF; /* light blue value */
+}
+
+aside.sidebar a.value {
+  text-decoration: none;
+  color: #89CFF0; /* blue links */
+}
+
+aside.sidebar a.value:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar icons */
+aside.sidebar .info i {
+  color: #89CFF0; /* default icon color */
+  margin-right: 6px;
+}
+
+/* Sidebar links */
+aside.sidebar .sidebar-link {
+  color: #89CFF0; /* default blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+aside.sidebar .sidebar-link:hover {
+  color: #FF69B4; /* pink on hover */
+}
+
+
+/* Main Content */
+main.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Folder Style */
+.folder-header {
+  cursor: pointer;
+  background-color: #cbe7ff;
+  padding: 14px 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+  margin-bottom: 5px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.folder-header:hover {
+  background-color: #89CFF0;
+  color: #fff;
+}
+
+.folder-header i {
+  color: #1A1F36;
+}
+
+.folder-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #e0f2ff;
+  padding: 0 20px;
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 15px;
+}
+
+.folder-content ul {
+  padding: 15px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills-columns {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 150px;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.skills-column h3 {
+  color: #1A1F36;
+  margin-bottom: 10px;
+}
+
+.folder-content.open .skills-column {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+a {
+  color: #89CFF0;
+}
+
+a:hover {
+  color: #1A1F36;
+}
